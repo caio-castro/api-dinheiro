@@ -1,7 +1,9 @@
 package com.example.algamoney_api.model;
 
-import org.antlr.v4.runtime.misc.NotNull;
 
+
+
+import jakarta.annotation.Nonnull;
 import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -17,13 +19,13 @@ public class Pessoa {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long codigo;
 
-    @NotNull
+    @Nonnull
     private String nome;
 
     @Embedded
     private Endereco endereco;
 
-    @NotNull
+    @Nonnull
     private Boolean ativo;
 
     public Long getCodigo() {
